@@ -73,7 +73,7 @@ The solution should produce a CSV file with the following columns for each compo
 
 This format ensures clarity, traceability, and compliance with the constraints. The efficiency analysis will provide insight into the benefits of optimization compared to a naive chronological placement.
 
-We considered three algorithms for solving the problem: Genetic Algorithm (GA), Simulated Annealing (SA), and Tabu Search (TS).
+We considered two algorithms for solving the problem: Genetic Algorithm (GA) and Simulated Annealing (SA).
 
 ## Problem-Solving Algorithms
 
@@ -134,14 +134,13 @@ We considered three algorithms for solving the problem: Genetic Algorithm (GA), 
 
 ### Why We Chose These Algorithms for Comparison
 
-When addressing our bin-packing optimization problem, we wanted to ensure we selected algorithms that could handle the complexity of the task while respecting its constraints. **Genetic Algorithm (GA)**, **Simulated Annealing (SA)**, and **Tabu Search (TS)** were natural choices because they are well-established methods for solving optimization problems, each bringing unique strengths to the table.
+When addressing our bin-packing optimization problem, we wanted to ensure we selected algorithms that could handle the complexity of the task while respecting its constraints. **Genetic Algorithm (GA)** and **Simulated Annealing (SA)** were natural choices because they are well-established methods for solving optimization problems, each bringing unique strengths to the table.
 
-#### **Why These Three Algorithms?**
+#### **Why These Two Algorithms?**
 - **Genetic Algorithm (GA)** stands out as a global optimization method. It is particularly effective in exploring large, complex solution spaces like ours, where the goal is to maximize sheet utilization while minimizing the number of sheets. With its population-based nature, GA can evaluate multiple potential arrangements simultaneously, providing a diverse exploration of the space. Its adaptability to constraints—by penalizing infeasible solutions—makes it ideal for solving a problem as intricate as ours.
 
 - **Simulated Annealing (SA)** offers a different approach. While it doesn’t evaluate a population of solutions like GA, it introduces probabilistic mechanisms that allow it to escape local optima. This makes SA a strong candidate for refining solutions, especially when dealing with the tight spatial constraints of placing components on sheets. Its simplicity is appealing, and it serves as a great benchmark for testing the efficiency of more sophisticated approaches like GA.
 
-- **Tabu Search (TS)** was included for its structured local search capabilities. TS avoids getting stuck in cycles by remembering previously visited solutions and steering the search in new directions. It’s an appealing choice for tasks with clear neighborhood structures, and we wanted to test its potential for fine-tuning solutions in our context.
 
 ### Comparison of GA and SA
 
